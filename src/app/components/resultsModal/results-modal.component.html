@@ -1,0 +1,45 @@
+<main>
+    <div id="size-left">
+        <a (click)="abrirHistorico()" title="histórico de pesquisa">
+            <img id="icons" src="../assets/img/picture_in_picture.svg.png" alt="icons">
+        </a>
+        <div id="container">
+            <h2>Buscar CEP</h2>
+            <form action="">
+                <input name="cep" mask=" 00.000-000" [allowNegativeNumbers]=" false" [showMaskTyped]=" true "
+                    [(ngModel)]="cep" />
+                <button class="app-component" (click)="getCepInformations()">Buscar</button>
+            </form>
+            <a href="" (click)="logoff()">
+                <img src="../../../assets/img/logout.png" alt="sair">
+            </a>
+        </div>
+    </div>
+    <div id="size-right">
+        <img src="../assets/img/img.jpg">
+    </div>
+
+    <!-- Modal -->
+
+    <div class="view-off" *ngIf="endereco"></div>
+    <div class="modal" *ngIf="endereco">
+        <h2>Resultado da pesquisa pelo CEP</h2>
+        <table>
+            <tr>
+                <th>Logradouro/Nome</th>
+                <th>Bairro/Distrito</th>
+                <th>Localidade</th>
+                <th>UF</th>
+                <th>CEP</th>
+            </tr>
+            <tr>
+                <td>{{endereco.logradouro || 'Não encontrado'}}</td>
+                <td>{{endereco.bairro || 'Não encontrado'}}</td>
+                <td>{{endereco.localidade || 'Não encontrado'}}</td>
+                <td>{{endereco.uf || 'Não encontrado'}}</td>
+                <td>{{endereco.cep || 'Não encontrado'}}</td>
+            </tr>
+        </table>
+        <button ngClass="button-result" (click)="cleanArray()">Voltar</button>
+    </div>
+</main>

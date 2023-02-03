@@ -1,0 +1,26 @@
+<div class="view-off"></div>
+<div class="modal">
+    <h2>Histórico de Buscas</h2>
+    <table>
+        <tr>
+            <th>Nº</th>
+            <th>Logradouro/Nome</th>
+            <th>Bairro/Distrito</th>
+            <th>Localidade</th>
+            <th>UF</th>
+            <th>CEP</th>
+        </tr>
+        <tr *ngFor="let item of cepHistory; index as id">
+            <td>{{id+1}}</td>
+            <td>{{item.logradouro || 'Não encontrado'}}</td>
+            <td>{{item.bairro || 'Não encontrado'}}</td>
+            <td>{{item.localidade || 'Não encontrado'}}</td>
+            <td>{{item.uf || 'Não encontrado'}}</td>
+            <td>{{item.cep || 'Não encontrado'}}</td>
+        </tr>
+    </table>
+    <div class="buttonPradon">
+        <button (click)="fechar()">Voltar</button>
+        <button (click)="limpar()">Limpar</button>
+    </div>
+</div>

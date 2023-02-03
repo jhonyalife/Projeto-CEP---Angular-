@@ -1,0 +1,15 @@
+<div class="view-off"></div>
+
+<div class="modal">
+    <h2>Login</h2>
+    <p class="mensagem-erro">{{mensagemErro}}</p>
+    <form [formGroup]="form">
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" formControlName="usuario">
+        <label for="senha">Usuário:</label>
+        <input type="password" id="senha" formControlName="senha">
+        <button class="btnLogin" (click)="onLogin()">Entrar</button>
+    </form>
+
+
+</div>
