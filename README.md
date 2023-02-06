@@ -1,27 +1,37 @@
-# Projeto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+# Projeto CEP - Angular
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### O que é este projeto?
 
-## Code scaffolding
+Este projeto é uma aplicação Angular que busca e retorna o endereço correspondente a um determinado CEP. Como também tem a funcionalidade de guardar os registros de pesquisas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Além disso:
 
-## Build
+- A interface é simples e intuitiva, permitindo ao usuário realizar a busca do endereço com facilidade.
+- A aplicação utiliza a API de consulta [VIACEP](https://viacep.com.br/) para obter as informações precisas sobre o endereço.
+- O histórico de pesquisas é armazenado localmente no navegador do usuário, permitindo acesso rápido às informações já pesquisadas.
+- A aplicação é responsiva, adaptando-se a diferentes tamanhos de tela.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Como usar este projeto?
 
-## Running unit tests
+<img src="./src/assets/img/login.png">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Na tela de login, insira as credenciais de usuário: "admin" e senha: "1234" para acessar a tela de busca.
 
-## Running end-to-end tests
+<img src="./src/assets/img/home.png">
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Já na tela de busca, insira o cep que deseja procurar e click no botão "buscar" e será apresentado um modal com o resultado.
 
-## Further help
+<img src="./src/assets/img/resultado.png">
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Caso deseje consultar as buscas realizaads, no canto superior esquerdo haverá um ícone que lhe redirecioná para a tela de registros.
+
+<img src="./src/assets/img/historico.png">
+
+### Como utilizar este projeto?
+
+Para utilizar este projeto, é preciso fazer o download do repositório e uma vez na pasta raís do repositório, você deve rodar o comando `npm install` para fazer a instalação e o comando `ng serve` para executar a aplicação em um terminal.
+
+Isso irá executar servidor de desenvolvimento, e rodará a aplicação em uma das portas da sua máquina, que pode ser acessada através de **<http://localhost:PORTA>** na sua máquina, ou através de  **<http://SEUIP:PORTA>** na rede local. Esses endereços serão exibidos após o programa estar rodando.
